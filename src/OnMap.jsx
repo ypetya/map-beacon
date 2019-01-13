@@ -25,6 +25,8 @@ class Display extends Component {
             const { coords: { latitude, longitude } } = position;
             this.id = Math.random();
             this.props.stomp.subscribe('/locations/*', msg => {
+                
+                const {latitude,longitude} = msg.headers;
 
                 if(!this.centered) {
                     this.centered=1;
