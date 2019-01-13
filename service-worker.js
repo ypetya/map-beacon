@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "https://ypetya.github.io/map-beacon/precache-manifest.fe142d4bde2d74f2d95d92d0328eef86.js"
+  "https://ypetya.github.io/map-beacon/precache-manifest.82a67d2e5f1d1b10b16ef230fb9e9c15.js"
 );
 
 workbox.clientsClaim();
