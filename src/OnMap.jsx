@@ -10,7 +10,7 @@ class Display extends Component {
             renderer: L.svg()
         }).setView([51.505, -0.09], 18);
 
-        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: 'OpenStreetMaps',
             minZoom: 2,
             maxZoom: 30,
