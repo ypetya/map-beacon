@@ -1,55 +1,41 @@
 import React, { Component } from "react";
 import * as L from "leaflet";
-import './OnMap.css';
+import "./OnMap.css";
 
 class Display extends Component {
+  componentDidMount = () => {
+    this.map = L.map("map_osm", {
+      renderer: L.svg()
+    }).setView([51.505, -0.09], 18);
 
-    componentDidMount = () => {
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "OpenStreetMaps",
+      minZoom: 2,
+      maxZoom: 30,
+      id: "mapbox.streets"
+    }).addTo(this.map);
+  };
 
-        this.map = L.map("map_osm", {
-            renderer: L.svg()
-        }).setView([51.505, -0.09], 18);
+  render = () => {
+    const { position, stomp } = this.props;
+    if (position && this.map && stomp && !this.timer) {
+      this.props.stomp.subscribe("/locations/*", msg => {
+        const { latitude, longitude } = msg.headers;
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: 'OpenStreetMaps',
-            minZoom: 2,
-            maxZoom: 30,
-            id: "mapbox.streets"
-        }).addTo(this.map);
-
-    }
-
-    render = () => {
-        const { position, stomp } = this.props;
-        if (position && this.map && stomp && !this.timer) {
-            const { coords: { latitude, longitude } } = position;
-            this.id = Math.random();
-            this.props.stomp.subscribe('/locations/*', msg => {
-                
-                const {latitude,longitude} = msg.headers;
-
-                if(!this.centered) {
-                    this.centered=1;
-                    this.map.setView([latitude, longitude], 30 - this.map.getZoom());
-                }
-                const circle = L.circle([latitude, longitude], { radius: 5}).addTo(this.map);
-                setTimeout(()=>{circle.remove()},5000);
-
-            });
-            this.timer = setInterval(() => {
-                this.props.stomp.send(`/locations/${this.id}`, { latitude, longitude }, 'loc');
-            }, 5000)
-            this.props.stomp.subscribe()
+        if (!this.centered) {
+          this.centered = 1;
+          this.map.setView([latitude, longitude], 30 - this.map.getZoom());
         }
-        return <div id="map_osm" className="LeafletMap"></div>;
+        const circle = L.circle([latitude, longitude], { radius: 5 }).addTo(
+          this.map
+        );
+        setTimeout(() => {
+          circle.remove();
+        }, 5000);
+      });
     }
-
-    componentWillUnmount = () => {
-        if (this.timer) {
-            clearInterval(this.timer);
-        }
-    }
+    return <div id="map_osm" className="LeafletMap" />;
+  };
 }
 
 export default Display;
-
