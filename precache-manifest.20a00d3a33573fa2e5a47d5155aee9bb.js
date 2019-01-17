@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "https://ypetya.github.io/map-beacon/static/js/runtime~main.f64a8335.js"
   },
   {
-    "revision": "a1328c35831de38488b6",
-    "url": "https://ypetya.github.io/map-beacon/static/js/main.a1328c35.chunk.js"
+    "revision": "72e022181dd79023508e",
+    "url": "https://ypetya.github.io/map-beacon/static/js/main.72e02218.chunk.js"
   },
   {
     "revision": "f600866f1a68051d780c",
     "url": "https://ypetya.github.io/map-beacon/static/js/1.f600866f.chunk.js"
   },
   {
-    "revision": "a1328c35831de38488b6",
-    "url": "https://ypetya.github.io/map-beacon/static/css/main.30bfcbb7.chunk.css"
+    "revision": "72e022181dd79023508e",
+    "url": "https://ypetya.github.io/map-beacon/static/css/main.c9695f7c.chunk.css"
   },
   {
-    "revision": "4160cd5076beef5ee062cf4fbda2d7eb",
+    "revision": "e08c82f2299f932bfdb599ce5d1a04fc",
     "url": "https://ypetya.github.io/map-beacon/index.html"
   }
 ];

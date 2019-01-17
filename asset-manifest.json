@@ -1,13 +1,13 @@
 {
-  "main.css": "https://ypetya.github.io/map-beacon/static/css/main.30bfcbb7.chunk.css",
-  "main.js": "https://ypetya.github.io/map-beacon/static/js/main.a1328c35.chunk.js",
-  "main.js.map": "https://ypetya.github.io/map-beacon/static/js/main.a1328c35.chunk.js.map",
+  "main.css": "https://ypetya.github.io/map-beacon/static/css/main.c9695f7c.chunk.css",
+  "main.js": "https://ypetya.github.io/map-beacon/static/js/main.72e02218.chunk.js",
+  "main.js.map": "https://ypetya.github.io/map-beacon/static/js/main.72e02218.chunk.js.map",
   "static/js/1.f600866f.chunk.js": "https://ypetya.github.io/map-beacon/static/js/1.f600866f.chunk.js",
   "static/js/1.f600866f.chunk.js.map": "https://ypetya.github.io/map-beacon/static/js/1.f600866f.chunk.js.map",
   "runtime~main.js": "https://ypetya.github.io/map-beacon/static/js/runtime~main.f64a8335.js",
   "runtime~main.js.map": "https://ypetya.github.io/map-beacon/static/js/runtime~main.f64a8335.js.map",
-  "static/css/main.30bfcbb7.chunk.css.map": "https://ypetya.github.io/map-beacon/static/css/main.30bfcbb7.chunk.css.map",
+  "static/css/main.c9695f7c.chunk.css.map": "https://ypetya.github.io/map-beacon/static/css/main.c9695f7c.chunk.css.map",
   "index.html": "https://ypetya.github.io/map-beacon/index.html",
-  "precache-manifest.de42eb421f1ccd86b528528e53c75d77.js": "https://ypetya.github.io/map-beacon/precache-manifest.de42eb421f1ccd86b528528e53c75d77.js",
+  "precache-manifest.20a00d3a33573fa2e5a47d5155aee9bb.js": "https://ypetya.github.io/map-beacon/precache-manifest.20a00d3a33573fa2e5a47d5155aee9bb.js",
   "service-worker.js": "https://ypetya.github.io/map-beacon/service-worker.js"
 }
