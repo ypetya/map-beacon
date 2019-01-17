@@ -26,9 +26,10 @@ class Display extends Component {
           this.centered = 1;
           this.map.setView([latitude, longitude], 30 - this.map.getZoom());
         }
-        const circle = L.circle([latitude, longitude], { radius: 5 }).addTo(
-          this.map
-        );
+        const circle = L.circle([latitude, longitude], {
+          radius: 4,
+          className: "HeartBeat"
+        }).addTo(this.map);
         setTimeout(() => {
           circle.remove();
         }, 5000);
